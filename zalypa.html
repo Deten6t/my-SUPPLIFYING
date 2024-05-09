@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор обоев</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+    .calculator {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .input-field {
+        margin-bottom: 10px;
+    }
+    .btn-calculate {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .result {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .remove-btn {
+        color: red;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Калькулятор обоев</h2>
+        <div class="input-field">
+            <label for="wallpaper_length">Длина обоев (в метрах):</label>
+            <input type="number" id="wallpaper_length" min="0" step="0.01">
+        </div>
+        <div class="input-field">
+            <label for="wallpaper_width_cm">Ширина обоев (в сантиметрах):</label>
+            <input type="number" id="wallpaper_width_cm" min="0">
+        </div>
+        <div class="input-field">
+            <label for="room_length">Длина комнаты (в метрах):</label>
+            <input type="number" id="room_length" min="0" step="0.01">
+        </div>
+        <div class="input-field">
+            <label for="room_width">Ширина комнаты (в метрах):</label>
+            <input type="number" id="room_width" min="0" step="0.01">
+        </div>
+        <div class="input-field">
+            <label for="room_height">Высота комнаты (в метрах):</label>
+            <input type="number" id="room_height" min="0" step="0.01">
+        </div>
+        <div id="doors_windows"></div>
+        <button onclick="addDoor()">Добавить дверь</button>
+        <button onclick="addWindow()">Добавить окно</button>
+        <button class="btn-calculate" onclick="calculateWallpaper()">Рассчитать</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        var doorCount = 0;
+        var windowCount = 0;
+
+        function addDoor() {
+            doorCount++;
+            var doorWindowContainer = document.getElementById("doors_windows");
+            var doorWindowDiv = document.createElement("div");
+            doorWindowDiv.setAttribute("id", `door_${doorCount}`);
+            doorWindowDiv.innerHTML = `
+                <div class="input-field">
+                    <label for="door_width_${doorCount}">Ширина двери ${doorCount} (в метрах):</label>
+                    <input type="number" id="door_width_${doorCount}" min="0" step="0.01">
+                </div>
+                <div class="input-field">
+                    <label for="door_height_${doorCount}">Высота двери ${doorCount} (в метрах):</label>
+                    <input type="number" id="door_height_${doorCount}" min="0" step="0.01">
+                </div>
+                <button class="remove-btn" onclick="removeElement('door_${doorCount}')">Удалить</button>
+            `;
+            doorWindowContainer.appendChild(doorWindowDiv);
+        }
+
+        function addWindow() {
+            windowCount++;
+            var doorWindowContainer = document.getElementById("doors_windows");
+            var doorWindowDiv = document.createElement("div");
+            doorWindowDiv.setAttribute("id", `window_${windowCount}`);
+            doorWindowDiv.innerHTML = `
+                <div class="input-field">
+                    <label for="window_width_${windowCount}">Ширина окна ${windowCount} (в метрах):</label>
+                    <input type="number" id="window_width_${windowCount}" min="0" step="0.01">
+                </div>
+                <div class="input-field">
+                    <label for="window_height_${windowCount}">Высота окна ${windowCount} (в метрах):</label>
+                    <input type="number" id="window_height_${windowCount}" min="0" step="0.01">
+                </div>
+                <button class="remove-btn" onclick="removeElement('window_${windowCount}')">Удалить</button>
+            `;
+            doorWindowContainer.appendChild(doorWindowDiv);
+        }
+
+        function removeElement(elementId) {
+            var element = document.getElementById(elementId);
+            if (element) {
+                element.parentNode.removeChild(element);
+            }
+        }
+
+        function calculateWallpaper() {
+            var wallpaperLength = parseFloat(document.getElementById("wallpaper_length").value);
+            var wallpaperWidthCm = parseFloat(document.getElementById("wallpaper_width_cm").value);
+            var roomLength = parseFloat(document.getElementById("room_length").value);
+            var roomWidth = parseFloat(document.getElementById("room_width").value);
+            var roomHeight = parseFloat(document.getElementById("room_height").value);
+
+            var totalWallArea = 2 * (roomWidth * roomHeight) + 2 * (roomLength * roomHeight);
+
+            var doorWindowAreas = 0;
+            for (var i = 1; i <= doorCount; i++) {
+                var doorWidth = parseFloat(document.getElementById(`door_width_${i}`).value);
+                var doorHeight = parseFloat(document.getElementById(`door_height_${i}`).value);
+                doorWindowAreas += doorWidth * doorHeight;
+            }
+
+            for (var j = 1; j <= windowCount; j++) {
+                var windowWidth = parseFloat(document.getElementById(`window_width_${j}`).value);
+                var windowHeight = parseFloat(document.getElementById(`window_height_${j}`).value);
+                doorWindowAreas += windowWidth * windowHeight;
+            }
+
+            var totalAreaToCover = totalWallArea - doorWindowAreas;
+
+            var rollsNeeded = Math.ceil(totalAreaToCover / (wallpaperLength * (wallpaperWidthCm / 100)));
+
+            document.getElementById("result").innerText = "Вам потребуется примерно " + rollsNeeded + " рулон(ов) обоев.";
+        }
+    </script>
+</body>
+</html>
