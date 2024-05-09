@@ -1,0 +1,270 @@
+@font-face {
+ font-family: 'ofont.ru_Hero';
+  src: url(../fonts/ofont.ru_Hero.eot);
+  src: url(../fonts/ofont.ru_Hero.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/ofont.ru_Hero.otf) format('otf'),
+       url(../fonts/ofont.ru_Hero.svg#ofont.ru_Hero) format('svg'),
+       url(../fonts/ofont.ru_Hero.ttf) format('truetype'),
+       url(../fonts/ofont.ru_Hero.woff) format('woff'),
+       url(../fonts/ofont.ru_Hero.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'ofont.ru_Daray';
+  src: url(../fonts/ofont.ru_Daray.eot);
+  src: url(../fonts/ofont.ru_Daray.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/ofont.ru_Daray.ttf) format('truetype'),
+       url(../fonts/ofont.ru_Daray.otf) format('otf'),
+       url(../fonts/fonts/fonts/ofont.ru_Daray.svg#ofont.ru_Daray) format('svg'),
+       url(../fonts/fonts/ofont.ru_Daray.woff) format('woff'),
+       url(../fonts/ofont.ru_Daray.woff2) format('woff2');
+      font-weight: 200;
+      font-style:normal; 
+
+
+}
+*{ 
+padding: 0;
+margin: 0;
+ }
+
+h1, h2,h3, h4, h5. h6{
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+body {
+  background-color: #363D4E;
+  width: 1903px;
+}
+.kat a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+ color: #fff;
+ font-size: 30px;
+ font-family: 'ofont.ru_Hero';
+}
+.kat1 a {
+  text-decoration: none;
+  justify-content: center;
+  display: flex;
+color: #fff;
+ font-size: 30px;
+  font-family: 'ofont.ru_Hero';
+}
+.kat2 a {
+ text-decoration: none;
+ display: flex;
+ justify-content: center;
+ color: #fff;
+  font-size: 30px;
+   font-family: 'ofont.ru_Hero';
+}
+
+.kat {
+  background-color: rgb(34,34,34, 1);
+     border:
+      1px         /* width */
+        solid       /* style */
+        #3D434F;  /* color */
+       
+         width: 10%;
+}
+.kat1 {
+  background-color: rgb(34, 34, 34, 1);
+     border:
+      1px         /* width */
+        solid       /* style */
+        #3D434F;  /* color */
+         border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+         width: 10%;
+         text-decoration: none;
+
+}
+.kat2 {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(34,34,34, 1);
+     border:
+      1px         /* width */
+        solid       /* style */
+        #3D434F;  /* color */
+        width: 10%;
+}
+.katgl {
+margin-left: 10px;
+margin-top: 213px;
+}
+.Главная {
+    display: flex;
+    width: 100%;
+}
+.Главная li a {
+    font-family: 'ofont.ru_Daray';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+color: #FFFBF1;
+  
+
+}
+
+.Главная li {
+    margin-right: 100px;
+
+}
+.nav{
+    display: flex;
+    align-items: center;
+    width: 1450px;
+    height: auto;
+    background-color: rgb(34,34,34, 1);
+     border:
+      2px         /* width */
+        solid       /* style */
+        #3D434F;  /* color */
+         border-radius: 100px;
+ margin-left: 220px;
+    
+}
+
+.logo {
+    margin-right: 98.78px;
+    margin-left: 30px;
+    
+}
+h1 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color:#fff;
+    margin-top: 30px;
+}
+.table {
+    margin-left: 590px;
+    margin-top: -360px;
+}
+table th {
+ border: 2px #3D434F solid;
+ color:#fff;
+ background-color:rgb(34,34,34, 1);
+ font-size: 30px;
+  font-family: 'ofont.ru_Daray';
+  padding: 0px 20px 0px 20px;
+  text-align: left;
+    }
+    table{
+  border-spacing: 0px;
+  
+}
+
+.ceny11 {
+    border-top-left-radius: 10px;
+    background-color: rgb(60,163,225, 1) ;
+}
+.ceny12 {
+    border-top-right-radius: 10px;
+    background-color: rgb(60,163,225, 1) ;
+}
+.ceny13 {
+    background-color: rgb(60,163,225, 1) ;
+}
+.select-material {
+   margin-right: 10px;
+}
+.ceny14 {
+    border-bottom-left-radius: 10px; 
+}
+   
+   
+.ceny16 {
+    border-bottom-right-radius: 10px;
+}
+.checkoutcontainer {
+    margin-left: 665px;
+    border: 2px solid #3D434F;
+    width: 500px;
+    text-align: right;
+    background-color: rgb(34,34,34, 1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+     font-family: 'ofont.ru_Hero';
+}
+.footer p {
+     font-family: 'ofont.ru_Hero';
+     font-size: 20px;
+     font-weight: 200px;
+     text-align: justify;
+      vertical-align: top;
+     
+     padding-bottom: 15px;
+}
+.footer {
+     background-color: rgb(34,34,34, 1);
+  border:
+      2px         /* width */
+        solid       /* style */
+        #3D434F;  /* color */
+    height: 241px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+.footer1{
+    background-color: #363D4E;
+    margin-top: 300px;
+
+}
+.logo1 {
+   
+
+}
+.container1 p {
+color: #ffffff;
+    font-size: 15px;
+ }
+.masenger {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.masenger1 {
+    padding-left: 904px;
+    padding-top: 10px;
+        display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+th input[type="number"]{
+            border: none; /* убираем обводку у чисел */
+            outline: none; /* убираем обводку при фокусе */
+            background-color: rgb(34,34,34, 1);
+        }
+ th  input[value]{
+    color:#fff;
+     font-family: 'ofont.ru_Hero';
+     font-size: 30px;
+ }       
+ th input {
+    width: 100px;
+ }
+ 

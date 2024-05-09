@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'ofont.ru_Hero';
+  src: url(../fonts/ofont.ru_Hero.eot);
+  src: url(../fonts/ofont.ru_Hero.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/ofont.ru_Hero.otf) format('otf'),
+       url(../fonts/ofont.ru_Hero.svg#ofont.ru_Hero) format('svg'),
+       url(../fonts/ofont.ru_Hero.ttf) format('truetype'),
+       url(../fonts/ofont.ru_Hero.woff) format('woff'),
+       url(../fonts/ofont.ru_Hero.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'ofont.ru_Daray';
+  src: url(../fonts/ofont.ru_Daray.eot);
+  src: url(../fonts/ofont.ru_Daray.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/ofont.ru_Daray.ttf) format('truetype'),
+       url(../fonts/ofont.ru_Daray.otf) format('otf'),
+       url(../fonts/fonts/fonts/ofont.ru_Daray.svg#ofont.ru_Daray) format('svg'),
+       url(../fonts/fonts/ofont.ru_Daray.woff) format('woff'),
+       url(../fonts/ofont.ru_Daray.woff2) format('woff2');
+      font-weight: 200;
+      font-style:normal; 
+
+
+}
+*{ 
+padding: 0;
+margin: 0;
+ }
+ .adout {
+    width: 1870px;
+}
+.header {
+   background-color: rgba(89, 161, 228, 1);
+   position: relative;
+    padding-top: 17px;
+    
+    height: 220px;
+}
+
+
+.Главная {
+    display: flex;
+}
+.Главная li a {
+    font-family: 'ofont.ru_Daray';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 35px;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.Главная li {
+    margin-right: 55px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+}
+.nav1{
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+}
+
+
+.logo {
+    margin-right: 98.78px;
+    margin-left: 226px;
+}
+.ger {
+ font-size: 20px;
+ font-family: 'ofont.ru_Daray';
+}
+.Назад li a {
+    font-family: 'ofont.ru_Daray';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 35px;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+.Назад li {
+    margin-right: 55px;
+}
+.adout1{
+     background-color: rgba(89, 161, 228, 1);
+   position: relative;
+    padding-top: 17px;
+    
+    height: 506px;
+
+}
+.cardList{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .card{
+        
+        background-color: #FFFFFF;
+        width: 1272px;
+        padding: 15px;
+        border-radius:25px;
+        margin-right: 73px;
+    }
+.card h{
+    font-size: 32px;
+    margin-right: 72px;
+}
+.prof{
+    margin-top: 180px;
+
+}
+.prof p{
+    font-size: 22px;
+}
+.block-vert-line{
+border-left:1px solid black;
+padding-left:15px;
+height: 400px;
+}
+.card1{
+        
+        background-color: #D9D9D9;
+    width: 397px;
+    padding: 15px;
+    border-radius: 25px;
+    margin-right: 73px;
+    }
+    .center {
+        display: flex;
+        margin-left: 339px;
+
+    }
+    .nav2{
+        display: flex;
+    }
+    .vv{
+      margin-left: 345px;
+
+    }
